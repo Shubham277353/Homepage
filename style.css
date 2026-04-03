@@ -74,3 +74,13 @@ i{
   font-size: 35px;
   margin: 8px;
 }
+
+.project-card{
+  max-width: 100%;
+  max-height: 600px;
+  margin: 20px;
+}
+
+.project-card img{
+  
+}
