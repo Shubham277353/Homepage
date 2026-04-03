@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Share+Tech+Mono&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Share+Tech+Mono&display=swap");
 
 * {
   margin: 0;
@@ -7,4 +6,31 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/016/961/935/small/space-game-background-neon-night-alien-landscape-free-vector.jpg);
+  background-size: cover;
+}
 
+#photo-section {
+  height: fit-content;
+  position: relative;
+}
+
+#profile-photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#photo-section h1 {
+  color: white;
+  position: absolute;
+  bottom: 1%;
+  left: 3%;
+  font-family: Playfari Display;
+  text-shadow: 0 0 5px black;
+}
