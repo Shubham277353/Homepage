@@ -4,42 +4,42 @@ const projectsArray = [
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "https://github.com/Shubham277353/Do-to-Dooo/raw/main/Images/Screenshot.png",
+      "./images/to-do-app.png",
   },
   {
-    name: "Do-to-Doo",
+    name: "Weather App",
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "https://github.com/Shubham277353/Do-to-Dooo/raw/main/Images/Screenshot.png",
+      "./images/Weather-app.png",
   },
   {
-    name: "Do-to-Doo",
+    name: "Book Nest",
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "https://github.com/Shubham277353/Do-to-Dooo/raw/main/Images/Screenshot.png",
+      "./images/book-nest.png",
   },
   {
-    name: "Do-to-Doo",
+    name: "Tic-Tac-Toe",
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "https://github.com/Shubham277353/Do-to-Dooo/raw/main/Images/Screenshot.png",
+      "./images/tic-tac-toe.png",
   },
   {
-    name: "Do-to-Doo",
+    name: "Calculator",
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "https://github.com/Shubham277353/Do-to-Dooo/raw/main/Images/Screenshot.png",
+      "./images/calculator.png",
   },
   {
-    name: "Do-to-Doo",
+    name: "Odin Sinup Page",
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "https://github.com/Shubham277353/Do-to-Dooo/raw/main/Images/Screenshot.png",
+      "./images/singup.png",
   },
 ];
 
