@@ -4,42 +4,42 @@ const projectsArray = [
     description:
       "This is a to-do-app , to manage tasks in the form of projects.",
     imageUrl:
-      "./images/to-do-app.png",
+      "Images/to-do-app.png",
   },
   {
     name: "Weather App",
     description:
       "Checks weather for a specific country/city.",
     imageUrl:
-      "./images/Weather-app.png",
+      "Images/Weather-app.png",
   },
   {
     name: "Book Nest",
     description:
       "Your personal books manager.",
     imageUrl:
-      "./images/book-nest.png",
+      "Images/book-nest.png",
   },
   {
     name: "Tic-Tac-Toe",
     description:
       "A simple two/one player tic-tac-toe game",
     imageUrl:
-      "./images/tic-tac-toe.png",
+      "Images/tic-tac-toe.png",
   },
   {
     name: "Calculator",
     description:
       "Your personal casio style calculator",
     imageUrl:
-      "./images/calculator.png",
+      "Images/calculator.png",
   },
   {
     name: "Odin Sinup Page",
     description:
       "Sign up page for an asgard government greivance portal.",
     imageUrl:
-      "./images/singup.png",
+      "Images/singup.png",
   },
 ];
 
