@@ -7,38 +7,6 @@
   font-family: Roboto;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 30px;
-  /* background-image: url(https://static.vecteezy.com/system/resources/thumbnails/016/961/935/small/space-game-background-neon-night-alien-landscape-free-vector.jpg); */
-  background-size: cover;
-}
-
-#photo-section {
-  height: fit-content;
-  position: relative;
-  box-shadow: 0 0 8px rgb(0, 0, 0,0.5);
-}
-
-#profile-photo {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-#photo-section h1 {
-  color: white;
-  position: absolute;
-  bottom: 1%;
-  left: 3%;
-  font-family: Playfari Display;
-  text-shadow: 0 0 10px black;
-  font-size: 60px;
-  font-weight: 510;
-}
-
 .bg-img {
   position: relative;
 }
@@ -54,37 +22,70 @@ header {
   transform: skewY(-14deg) translateY(-20%);
 }
 
-#about-me{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 25px 0px 10px 0px;
-    gap: 12px;
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
 }
 
-#about-me h1{
-    font-size: 30px;
-    font-family: Playfair Display;
-    margin: 10px 0 10px 0;
+#photo-section {
+  height: fit-content;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 0 8px rgb(0, 0, 0, 0.5);
 }
 
-#about-me p{
+
+#photo-section h1 {
+  color: white;
+  position: absolute;
+  bottom: 1%;
+  left: 3%;
+  font-family: Playfari Display;
+  text-shadow: 0 0 10px black;
+  font-size: 50px;
+  font-weight: 510;
+}
+
+#photo-section img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0px 10px 0px;
+  gap: 12px;
+}
+
+#about-me h1 {
+  font-size: 30px;
+  font-family: Playfair Display;
+  margin: 10px 0 10px 0;
+  font-weight: 500;
+}
+
+#about-me p {
   font-size: 24px;
   margin-bottom: 16px;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-i{
+i {
   font-size: 35px;
   margin: 8px;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,37 +93,36 @@ main{
   margin-top: 30%;
 }
 
-.project-card{
+.project-card {
   max-width: 100%;
   max-height: 600px;
   margin: 20px;
-  box-shadow: 1px 4px 10px rgb(0, 0, 0,0.5);
+  box-shadow: 1px 4px 10px rgb(0, 0, 0, 0.5);
 }
 
-.project-card img{
+.project-card img {
   max-width: 100%;
   height: 300px;
   display: block;
   object-fit: cover;
-
 }
 
-.header-div{
+.header-div {
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
 
-.header-div h2{
+.header-div h2 {
   font-family: Playfiar Display;
 }
 
-.icon-container{
+.icon-container {
   display: flex;
   width: 30%;
 }
 
-svg{
+svg {
   width: 30px;
   height: auto;
   margin-right: 10px;
@@ -133,7 +133,7 @@ svg{
   padding: 0 8px 40px 10px;
 }
 
-.footer-bg{
+.footer-bg {
   position: relative;
   margin-top: 40%;
 }
@@ -148,29 +148,28 @@ svg{
   z-index: -1;
 }
 
-footer{
+footer {
   padding: 12px 0 0 18px;
   color: white;
-
 }
 
-
-footer h1{
+footer h1 {
   text-align: center;
   font-family: Playfair Display;
+  font-weight: 500;
 }
 
-footer p{
-  margin: 10px 0 10px 0 ;
+footer p {
+  margin: 10px 0 10px 0;
   font-family: Roboto;
 }
 
-#p1{
+#p1 {
   font-size: 18px;
   font-weight: 500;
 }
 
-.footer-icons{
+.footer-icons {
   display: flex;
   justify-content: center;
   padding: 12px;
@@ -178,7 +177,7 @@ footer p{
 
 #footer-img {
   position: relative;
-  margin-top:10%;
+  margin-top: 10%;
   width: 100%;
   height: 400px;
 }
@@ -190,4 +189,39 @@ footer p{
   background-image: url(https://img.freepik.com/premium-photo/vertical-portrait-modern-black-businessman-working-home-office-analyzing-documents_236854-38732.jpg);
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .bg-img::before {
+    height: 700px;
+    transform: skewY(-14deg) translateY(-55%);
+  }
+
+  header{
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #photo-section{
+    width: 40%;
+  }
+
+  #photo-section img{
+    min-width: 240px;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #photo-section h1{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #about-me{
+    width: 60%;
+    align-items: flex-start;
+  }
 }
