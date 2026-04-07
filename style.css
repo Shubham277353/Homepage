@@ -57,6 +57,12 @@ body {
   font-family: var(--main-font);
 }
 
+.full-page{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-5);
+}
+
 .bg-img {
   position: relative;
 }
@@ -72,10 +78,12 @@ body {
   transform: skewY(-14deg) translateY(-20%);
 }
 
+
 header {
   display: flex;
   flex-direction: column;
   padding: var(--spacing-3);
+  gap: var(--spacing-5)
 }
 
 #user-card{
@@ -91,6 +99,7 @@ header {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  float: left;
 }
 
 #user-card h1 {
@@ -103,30 +112,19 @@ header {
   font-weight: 600;
 }
 
-#about-me {
+
+#about-me-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: var(--spacing-2);
   align-items: center;
-  margin: 25px 0px 10px 0px;
-  gap: 12px;
+  
 }
 
-#about-me h1 {
-  font-size: 30px;
-  font-family: Playfair Display;
-  margin: 10px 0 10px 0;
-  font-weight: 500;
-}
-
-#about-me p {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-i {
-  font-size: 35px;
-  margin: 8px;
+svg {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
 }
 
 main {
@@ -166,11 +164,6 @@ main {
   width: 30%;
 }
 
-svg {
-  width: 30px;
-  height: auto;
-  margin-right: 10px;
-}
 
 .project-card p {
   font-size: 18px;
