@@ -240,7 +240,7 @@ footer p {
     width: 4%;
 }
 
-/* @media (min-width: 601px) and (max-width: 1000px) {
+@media (min-width: 601px) and (max-width: 1000px) {
   .bg-img::before {
     height: 700px;
     transform: skewY(-14deg) translateY(-55%);
@@ -273,4 +273,4 @@ footer p {
     width: 60%;
     align-items: flex-start;
   }
-} */
+}
