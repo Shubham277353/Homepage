@@ -39,6 +39,7 @@ img {
   --spacing-3: 32px;
   --spacing-4: 48px;
   --spacing-5: 64px;
+  --spacing-6: 84px;
 
   --backdrop: 0 5px 8px rgb(0,0,0,0.6)
 }
@@ -60,7 +61,7 @@ body {
 .full-page{
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-5);
+  /* gap: var(--spacing-3); */
 }
 
 .bg-img {
@@ -72,10 +73,10 @@ body {
   content: " ";
   background-color: #5e7ac4;
   width: 100%;
-  height: 400px;
+  height: 500px;
   position: absolute;
   z-index: -1;
-  transform: skewY(-14deg) translateY(-20%);
+  transform: skewY(-14deg) translateY(-40%);
 }
 
 
@@ -83,14 +84,17 @@ header {
   display: flex;
   flex-direction: column;
   padding: var(--spacing-3);
-  gap: var(--spacing-5)
+  gap: var(--spacing-5);
+  align-items: center;
 }
 
 #user-card{
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 320px;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
   box-shadow: var(--backdrop);
 }
 
@@ -132,7 +136,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30%;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-6);
 }
 
 .project-card {

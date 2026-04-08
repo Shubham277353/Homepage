@@ -43,7 +43,7 @@ const projectsArray = [
   },
 ];
 
-const container = document.getElementById("projects-conatiner");
+const mainProjectContainer = document.getElementById("projects-conatiner");
 
 projectsArray.forEach((project) => {
   const projectCard = document.createElement("div");
@@ -76,5 +76,5 @@ projectsArray.forEach((project) => {
   description.textContent = project.description;
 
   projectCard.append(imageContainer,cardHeader, description);
-  container.append(projectCard);
+  mainProjectContainer.append(projectCard);
 });
