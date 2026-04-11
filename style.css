@@ -41,7 +41,7 @@ img {
   --spacing-5: 64px;
   --spacing-6: 84px;
 
-  --backdrop: 0 5px 8px rgb(0,0,0,0.6)
+  --backdrop: 0 5px 8px rgb(0, 0, 0, 0.6);
 }
 
 /* =============================================================================== */
@@ -58,7 +58,7 @@ body {
   font-family: var(--main-font);
 }
 
-.full-page{
+.full-page {
   display: flex;
   flex-direction: column;
   /* gap: var(--spacing-3); */
@@ -79,7 +79,6 @@ body {
   transform: skewY(-14deg) translateY(-40%);
 }
 
-
 header {
   display: flex;
   flex-direction: column;
@@ -88,41 +87,36 @@ header {
   align-items: center;
 }
 
-#user-card{
+#user-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: 350px;
   box-shadow: var(--backdrop);
 }
 
-#portrait-img{
+#name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  overflow-wrap: break-word;
+  text-align: center;
+  font-weight: 600;
+  z-index: 1;
+}
+
+#portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   float: left;
 }
-
-#user-card h1 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  overflow-wrap: break-word;
-  text-align: center;
-  font-weight: 600;
-}
-
-
 #about-me-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
   align-items: center;
-  
 }
 
 svg {
@@ -171,12 +165,10 @@ main {
   justify-content: center;
 }
 
-
 .project-card p {
   font-size: 18px;
   padding: 0 8px 40px 10px;
 }
-
 
 .footer-bg {
   position: relative;
@@ -237,10 +229,11 @@ footer p {
 }
 
 .contact-info svg {
-    width: 4%;
+  width: 4%;
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
+  
   .bg-img::before {
     height: 700px;
     transform: skewY(-14deg) translateY(-55%);
@@ -248,29 +241,21 @@ footer p {
 
   header {
     flex-direction: row;
-    align-items: center;
-    gap: 20px;
+    background-color: white;
+    margin: 80px 50px;
+    box-shadow: var(--backdrop);
   }
 
-  #photo-section {
-    width: 40%;
-  }
-
-  #photo-section img {
-    min-width: 240px;
-    max-height: 100%;
+  #user-card {
+    flex: 0 0 auto;
+    max-width: 250px;
     object-fit: cover;
-    object-position: center;
+    transform-origin: bottom right;
+    transform: scale(1.18);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
-  #photo-section h1 {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
+  #user-card h1 {
 
-  #about-me {
-    width: 60%;
-    align-items: flex-start;
   }
 }
