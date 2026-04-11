@@ -41,7 +41,7 @@ img {
   --spacing-5: 64px;
   --spacing-6: 84px;
 
-  --backdrop: 0 5px 8px rgb(0, 0, 0, 0.6);
+  --backdrop: 8px 5px 8px rgb(0, 0, 0, 0.6);
 }
 
 /* =============================================================================== */
@@ -69,14 +69,15 @@ body {
 }
 
 .bg-img::before {
-  display: block;
   content: " ";
-  background-color: #5e7ac4;
-  width: 100%;
-  height: 500px;
   position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #5e7ac4;
+  transform: skewY(-10deg);
   z-index: -1;
-  transform: skewY(-14deg) translateY(-40%);
 }
 
 header {
@@ -85,24 +86,25 @@ header {
   padding: var(--spacing-3);
   gap: var(--spacing-5);
   align-items: center;
+  margin: 20px;
 }
 
 #user-card {
   position: relative;
   width: 100%;
-  max-width: 350px;
-  box-shadow: var(--backdrop);
+  max-width: 310px;
+  /* box-shadow: var(--backdrop); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 #name {
   position: absolute;
-  bottom: 0;
+  left: 0;
+  bottom: 10px;
   width: 100%;
   color: rgb(255, 255, 255);
-  overflow-wrap: break-word;
   text-align: center;
   font-weight: 600;
-  z-index: 1;
 }
 
 #portrait-img {
@@ -172,7 +174,7 @@ main {
 
 .footer-bg {
   position: relative;
-  margin-top: 40%;
+  margin-top: 80px;
 }
 
 .footer-bg::before {
@@ -233,29 +235,33 @@ footer p {
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
-  
-  .bg-img::before {
-    height: 700px;
-    transform: skewY(-14deg) translateY(-55%);
-  }
-
   header {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    margin: 80px 50px;
+    padding: 30px;
+    gap: 40px;
+    /* margin: 20px; */
+    /* min-height: 450px; */
     box-shadow: var(--backdrop);
   }
 
   #user-card {
-    flex: 0 0 auto;
-    max-width: 250px;
-    object-fit: cover;
-    transform-origin: bottom right;
-    transform: scale(1.18);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  #user-card img {
+    width: 350px;
+    float: left;
+  }
+
+  #about-me-container {
+    flex: 2;
+    min-width: 0;
   }
 
   #user-card h1 {
-
   }
 }
