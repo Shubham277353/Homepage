@@ -26,7 +26,7 @@ img {
   max-width: 100%;
 }
 
-.tablet-img {
+.tablet , .tablet-name{
   display: none;
 }
 
@@ -121,11 +121,14 @@ body {
 #name {
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 0;
   width: 100%;
   color: rgb(255, 255, 255);
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
+  text-shadow: 1px 1px 2px black;
+  font-size: 2.6rem;
+
 }
 
 .about-me {
@@ -139,15 +142,23 @@ body {
 #about-me-container h1,
 nav {
   text-align: center;
+  margin-top: var(--spacing-1);
+}
+
+#about-me-container p{
+  margin-top: var(--spacing-2);
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
   margin-top: 20px;
 }
 
-
-
 svg {
-  width: 30px;
+  width: 25px;
   height: auto;
-  margin-right: 10px;
 }
 
 main {
@@ -260,52 +271,71 @@ footer p {
 
 @media (min-width: 601px) and (max-width: 1000px) {
 
+  .full-page{
+      margin-top:80px;
+
+  }
+
   #about-me-container{
     background-color: white;
     box-shadow: var(--backdrop);
     padding: var(--spacing-2);
-    margin: var(--spacing-2);
-
+    margin: 0 var(--spacing-3);
+    position: relative;
   }
 
   .mobile{
     display: none;
   }
 
-  .tablet-img{
+  .tablet{
     display: revert;
     float: left;
+    shape-outside: margin-box;
     box-shadow: var(--backdrop);
     width: 40%;
     margin-right: var(--spacing-2);
     margin-left: var(--spacing-1);
+    transform: scale(1.19);
+    transform-origin: bottom right;
+    object-fit: cover;
+    object-position: center;
+    max-height: 250px;
   }
 
-  /* header {
-
-  #user-card {
-    flex: 1;
-    max-width: 350px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  .tablet-name{
+    display: revert;
+    width: 50%;
+    position: absolute;
+    right: 30px;
+    top: -86px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 2.8rem;
   }
 
-  #user-card img {
-    min-width: 250px;
-    float: left;
+  nav{
+    justify-content: right;
   }
 
-  #about-me-container {
-    flex: 2;
-    min-width: 0;
-  }
-
-  #user-card h1 { */
-  /* } */
 }
 
 @media (min-width: 1001px) {
   .header-content {
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+#portrait-img {
+  min-width: 280px;
+  max-width: 40%;
+  height: auto;
+
+}
+
+  #about-me-container{
+    background-color: white;
   }
 }
