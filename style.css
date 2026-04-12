@@ -26,6 +26,14 @@ img {
   max-width: 100%;
 }
 
+.tablet-img {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
 /* =============================================================================== */
 /* Variables */
 /* =============================================================================== */
@@ -41,7 +49,7 @@ img {
   --spacing-5: 64px;
   --spacing-6: 84px;
 
-  --backdrop: 8px 5px 8px rgb(0, 0, 0, 0.6);
+  --backdrop: 8px 5px 10px rgb(0, 0, 0, 0.2);
 }
 
 /* =============================================================================== */
@@ -77,11 +85,10 @@ body {
   height: 600px;
   background-color: #5e7ac4;
   transform: skewY(-10deg);
-  z-index: 0;
+  z-index: -1;
 }
 
-.header-content{
-  position: relative;
+.header-content {
   z-index: 2;
 
   display: flex;
@@ -91,14 +98,19 @@ body {
   padding: var(--spacing-3);
 }
 
+.mobile {
+  display: revert;
+}
+
 #user-card {
   /* width: 100%; */
   /* max-width: 310px; */
+  position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 #portrait-img {
-  width: 270px;
+  width: 280px;
   height: auto;
   display: block;
   object-fit: cover;
@@ -112,21 +124,25 @@ body {
   bottom: 10px;
   width: 100%;
   color: rgb(255, 255, 255);
-  text-align: center;
   font-weight: 600;
+  text-align: center;
 }
 
-#about-me-container {
+.about-me {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2);
-  padding: 30px;
+  padding: 20px;
   max-width: 500px;
+  gap: var(--spacing-3);
 }
 
-#about-me-container h1,nav{
+#about-me-container h1,
+nav {
   text-align: center;
+  margin-top: 20px;
 }
+
+
 
 svg {
   width: 30px;
@@ -141,6 +157,7 @@ main {
   align-items: center;
   gap: var(--spacing-2);
   margin-top: var(--spacing-6);
+  padding: 10px;
 }
 
 .project-card {
@@ -243,21 +260,28 @@ footer p {
 
 @media (min-width: 601px) and (max-width: 1000px) {
 
-  .header-content{
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  #about-me-container{
+    background-color: white;
+    box-shadow: var(--backdrop);
+    padding: var(--spacing-2);
+    margin: var(--spacing-2);
+
+  }
+
+  .mobile{
+    display: none;
+  }
+
+  .tablet-img{
+    display: revert;
+    float: left;
+    box-shadow: var(--backdrop);
+    width: 40%;
+    margin-right: var(--spacing-2);
+    margin-left: var(--spacing-1);
   }
 
   /* header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 30px;
-    gap: 40px;
-    box-shadow: var(--backdrop);
-  }
 
   #user-card {
     flex: 1;
@@ -279,8 +303,9 @@ footer p {
   /* } */
 }
 
-@media (min-width: 1001px){
-  .header-content{
+@media (min-width: 1001px) {
+  .header-content {
     flex-direction: row;
+    justify-content: center;
   }
 }
