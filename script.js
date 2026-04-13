@@ -32,7 +32,7 @@ const projectsArray = [
   },
 ];
 
-const mainProjectContainer = document.getElementById("projects-conatiner");
+const mainProjectContainer = document.getElementById("projects-container");
 
 projectsArray.forEach((project) => {
   const projectCard = document.createElement("div");
